@@ -11,8 +11,10 @@ This is a Node.js Express application that demonstrates HubSpot OAuth 2.0 integr
 - `npm install` - Install dependencies
 - `npm run dev` - Start development server with nodemon (auto-reload)
 - `npm start` - Start production server
-- `npm run lint` - Run ESLint and Prettier checks
-- `npm run prettier:write` - Format code with Prettier
+- `npm run lint` - Run Biome linter
+- `npm run format` - Format code with Biome
+- `npm run check` - Run Biome linter and formatter checks
+- `npm run check:write` - Run Biome linter and formatter with fixes applied
 
 ## Architecture
 
