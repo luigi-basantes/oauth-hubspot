@@ -1,12 +1,18 @@
-extends includes/layout
+extends includes/login-layout
 block content
-  .container.text-center
-    h3 In order to continue please update the redirect URL on Auth settings page  of your app
-    h4 Redirect URL
-    pre#redirectURL #{redirectUri}
-    button.button-primary#copyBtn Copy
-    h3 After that authorize via OAuth
-    .authorize-button
-      a(class='button' href='/oauth') Authorize
+  .container.login-container
+    .login-content
+      .hubspot-logo
+        svg(width="120" height="40" viewBox="0 0 120 40" fill="none" xmlns="http://www.w3.org/2000/svg")
+          path(d="M20 0C8.96 0 0 8.96 0 20s8.96 20 20 20 20-8.96 20-20S31.04 0 20 0zm0 36c-8.84 0-16-7.16-16-16S11.16 4 20 4s16 7.16 16 16-7.16 16-16 16z" fill="#FF7A59")
+          path(d="M20 8c-6.63 0-12 5.37-12 12s5.37 12 12 12 12-5.37 12-12S26.63 8 20 8z" fill="#FF7A59")
+          text(x="50" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#2E475D") HubSpot
+      
+      h2.login-title Connect to HubSpot
+      p.login-subtitle Authorize Jelou AI to access your HubSpot CRM
+      
+      .authorize-button
+        a(class='button button-primary hubspot-button' href='/oauth') 
+          span Authorize
 block footerScripts
   script(type='application/javascript' src='/js/login.js')
